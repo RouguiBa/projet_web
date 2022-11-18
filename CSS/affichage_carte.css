@@ -1,0 +1,64 @@
+@font-face {
+    font-family:'tintin';
+    src: url('police/tintin_talking-webfont.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"tintin";
+    
+}
+#carte{
+    padding:10vh;
+    display : grid;
+    grid-template-columns : 1fr 2fr 1fr; /*TROIS COLONNES*/
+    grid-template-rows:  1fr 2fr 1fr; 
+}
+
+#map { 
+    height: 70%;
+    width: 70vw;
+    grid-column: 2;
+    grid-row: 2;
+    justify-items: center;
+    border-radius: 16px;
+    border: solid 2px black;
+    outline: none;
+    position: absolute;
+    background-size: contain;
+ }
+ #inventaire { 
+    color: white;
+    height: 70vh;
+    width: 10vw;
+    grid-column: 3;
+    grid-row: 2;
+    background-color: black;
+    border-radius: 16px;
+    transform: translateX(100px);
+}
+#joueur {
+    grid-row: 1;
+   
+}
+#joueur{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+#titre{
+    grid-column: 2;
+    grid-row: 1;
+    color: black;
+    text-align: center;
+    transform: translateY(1000px);
+}
+#myimg{
+    height: 100px;
+    width: 50px;
+}
+
+ 
+
+  

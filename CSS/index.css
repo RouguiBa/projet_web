@@ -1,0 +1,49 @@
+@font-face {
+    font-family:'tintin';
+    src: url('police/tintin_talking-webfont.woff2') format('woff2');
+}
+
+body{
+    width:80%;
+    margin: auto;
+    background-color: black;
+    font-family: 'tintin';
+  }
+
+#gif {
+    display:flex;
+    justify-content: center;
+}
+#audio {
+    display:flex;
+    justify-content: center;
+}
+#en_tete {
+    display:flex;
+    text-align: center;
+    color:white;
+    font-size: 160%;
+    justify-content:center;
+  }
+
+#intro {
+    font-family: 'tintin';
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    color:white;
+    font-size: 160%;
+  
+  }
+
+#play {
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;}
+.bouton {
+        background-color: white;
+        font-family: 'tintin';
+        font-size: 160%;
+        width: 30%;
+        border-radius: 16px;
+}
