@@ -39,9 +39,19 @@ function set(i){
               map.on('zoom', function() {
                 if (map.getZoom()>=result[0].niveau_zoom){
                   map.addLayer(markers);
+                  marqueur.on('click',function remove(){
+                    marqueur.on('click',function remove2(){
+                      map.removeLayer(marqueur);
+                    });
+                  });
                 }
                 else if(map.getZoom()<result[0].niveau_zoom){
                     map.removeLayer(markers);
+                    marqueur.on('click',function remove(){
+                      marqueur.on('click',function remove2(){
+                        map.removeLayer(marqueur);
+                      });
+                    });
                   }
             });
             list_objets.push(objet);
@@ -57,11 +67,7 @@ function set(i){
                   },{once:true});
                 }
             }
-            marqueur.on('click',function remove(){
-              marqueur.on('click',function remove2(){
-                map.removeLayer(marqueur);
-              });
-            });
+            
             click(marqueur);
             // if (objet.coord_x_suivant!=0 && objet.coord_y_suivant!=0){
               if(objet.type_objet==='transport'){
