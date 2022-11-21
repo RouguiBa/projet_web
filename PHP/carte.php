@@ -17,7 +17,7 @@
 </head>
 <body id="body">
     <div id="carte">
-    <div id="titre">Retrouvons Milou!</div>
+    <!-- <div id="titre"><p>Retrouvons Milou!</p></div> -->
     <div id="inventaire" class="tintin"><p id="indices">Inventaire d'indices</p></div>
     <div id="map" class="tintin"></div>
     </div>

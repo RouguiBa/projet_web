@@ -27,9 +27,12 @@ function message4(){
 
 setTimeout(function choix1(){
     window.location.href='../PHP/carte.php';
+    // var clicked=e.target.id;
+    // document.getElementById("titre").innerText=clicked;
 }, 3000)
 setTimeout(function choix2(){
     window.location.href='../PHP/carte.php';
+    
 },3000)
 setTimeout(function choix3(){
     window.location.href='../PHP/carte.php';

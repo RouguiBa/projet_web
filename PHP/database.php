@@ -1,6 +1,7 @@
 <?php
 
     include("connect.php");
+    // mysqli_set_charset($link,"utf8");
     $data=$_POST['id'];
 	$query='SELECT * FROM objets where id='.$_POST['id'];
 	$result=mysqli_query($link,$query);
