@@ -23,6 +23,7 @@ function set(i){
      })
       .then(result => result.json())
       .then(result => {
+        console.log(result);
             var objet=result[0];
             var icon = L.icon({
                                     iconUrl: result[0].image,
@@ -49,7 +50,7 @@ function set(i){
       // ####REGLAGE AJOUT DES OBJETS DANS L'INVENTAIRE####
               function click(m){
                 var img = document.createElement("img");
-                img.inventaire=objet.image
+                img.src=objet.image;
                 img.setAttribute('id','myimg');
                 if(objet.type_objet==="recup"){
                   m.on("click",function onClick(){
@@ -62,13 +63,13 @@ function set(i){
                 marqueur.setOpacity([0.0]);
               })
             })
-            click(marqueur);
             // if (objet.coord_x_suivant!=0 && objet.coord_y_suivant!=0){
               if(objet.type_objet==='transport'){
                 marqueur.on("click",function voyage(){
                 map.flyTo([objet.coord_x_suivant,objet.coord_y_suivant],16);
                 })
               }
+              click(marqueur);
         })}
 
 for (var i = 1; i < 10; i++){

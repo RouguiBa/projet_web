@@ -9,6 +9,18 @@
     font-family:"tintin";
     
 }
+#map { 
+    height: 70%;
+    width: 70vw;
+    grid-column: 2;
+    grid-row: 2;
+    justify-items: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    /* outline: none; */
+    position: absolute;
+    /* background-size: contain; */
+ }
 
 #carte{
     padding:10vh; 
@@ -18,18 +30,7 @@
     justify-content: center;
 }
 
-#map { 
-    height: 70%;
-    width: 70vw;
-    grid-column: 2;
-    grid-row: 2;
-    justify-items: center;
-    border-radius: 16px;
-    border: solid 2px black;
-    outline: none;
-    position: absolute;
-    background-size: contain;
- }
+
  #inventaire { 
     color: white;
     height: 70vh;
