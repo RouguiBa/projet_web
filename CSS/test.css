@@ -1,0 +1,91 @@
+@font-face {
+    font-family:'tintin';
+    src: url('police/tintin_talking-webfont.woff2') format('woff2');
+}
+  
+  body {
+    font-family: 'Bodoni MT';
+    font-size: 2vh;
+    background-color: #ffffff;
+    color:white;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 15vw auto 15vw;
+    grid-template-rows: 10vh auto 30vh;	
+  }
+  
+ 
+  h1 {
+    font-size: 4vh;
+    color :black;
+    font-family: 'tintin';
+  }
+  
+  #entete{
+      margin: 0;
+      background-color: black;
+      grid-column: 1 / span 3;
+      grid-row: 1;
+      text-align: center;
+  }
+  
+  #entete > h1 {
+    margin:0;
+    margin-top: 1vh;
+    font-size: 5vh;
+    color: white;
+  }
+  
+  #map {
+    height: 70vh;
+    width: auto;
+    grid-column: 1/ span 2;
+    grid-row: 2/ span 3;
+    margin :0;
+    border:solid 2px black;
+    border-radius: 10px;
+  }
+  
+  /* #footer{
+      padding: 10px;
+      text-align: justify;
+      grid-row: 3;
+      grid-column: 1 / span 3;
+    overflow: auto;
+    float: left;
+  } */
+  
+  /* #footer em {
+    font-family: Waltograph;
+  } */
+  /*--(INVENTAIRE)--*/
+  
+  #inventaire {
+    color: white;
+    /* border: solid 2px black; */
+    /* border-radius: 10px; */
+    grid-column: 3;
+    grid-row:2/ span 3;
+    align-content: space-between;
+    text-align: center;
+    background-color:black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  #myimg{
+    height: 100px;
+    width: 50px;
+    grid-column: 1;
+    grid-row: 1;
+}
+  
+  /* #TitreInventaire {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 2vh;
+  }
+   */
+  

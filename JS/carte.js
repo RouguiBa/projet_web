@@ -1,7 +1,7 @@
 var map = L.map('map').setView([47.50023382620123, 1.4579919877970893], 17);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-maxZoom: 20,
+maxZoom: 30,
 minZoom: 1,
 id: 'mapbox/streets-v11',
 tileSize: 512,
@@ -12,6 +12,7 @@ var markers = new L.FeatureGroup();
 var list_objets=[];
 var list_marker=[];
 var inventaire=document.getElementById("inventaire");
+var json={};
 
 function set(i){
     var data='id='+i;
@@ -23,7 +24,6 @@ function set(i){
      })
       .then(result => result.json())
       .then(result => {
-        console.log(result);
             var objet=result[0];
             var icon = L.icon({
                                     iconUrl: result[0].image,
@@ -46,6 +46,7 @@ function set(i){
                   }
             });
             list_objets.push(objet);
+            console.log(json);
 
       // ####REGLAGE AJOUT DES OBJETS DANS L'INVENTAIRE####
               function click(m){
@@ -62,6 +63,9 @@ function set(i){
               marqueur.on('click',function remove2(){
                 marqueur.setOpacity([0.0]);
               })
+              marqueur.getPopup().on('remove', function() {
+                marqueur.getPopup().setOpacity([0.0]);
+            });
             })
             // if (objet.coord_x_suivant!=0 && objet.coord_y_suivant!=0){
               if(objet.type_objet==='transport'){

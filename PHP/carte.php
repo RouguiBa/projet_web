@@ -12,15 +12,20 @@
     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
     crossorigin=""></script>
 
-    <link rel="stylesheet" href="../CSS/affichage_carte.css">
+    <link rel="stylesheet" href="../CSS/test.css">
     <link rel="icon" type="image/png" href="../IMG/Tintin_et_Milou_Logo_headshot.png" sizes="32x32">
 </head>
 <body id="body">
-    <div id="carte">
+    <!-- <div id="carte"> -->
     <!-- <div id="titre"><p>Retrouvons Milou!</p></div> -->
-    <div id="inventaire" class="tintin"><p id="indices">Inventaire</p></div>
+    <div id="entete">
+		<h1>Enquetons sur la disparition de Milou!</h1>
+	</div>
+    <div id="inventaire" class="tintin"><h1>Inventaire</h1></div>
     <div id="map" class="tintin"></div>
-    </div>
+    <!-- <div id="footer">
+	</div> -->
+    <!-- </div> -->
     <!-- <div id="message"><p id="texte"></p></div> -->
     <script src="../JS/perso.js"></script>
     <script src="../JS/carte.js"></script>

@@ -98,4 +98,4 @@
 //     maxZoom: 19,
 //     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 // }).addTo(map);
-// .on('click', e => e.target.remove())
+// .on('click', e => e.target.remove()) 0513
