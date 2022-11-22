@@ -18,7 +18,7 @@
 <body id="body">
     <div id="carte">
     <!-- <div id="titre"><p>Retrouvons Milou!</p></div> -->
-    <div id="inventaire" class="tintin"><p id="indices">Inventaire d'indices</p></div>
+    <div id="inventaire" class="tintin"><p id="indices">Inventaire</p></div>
     <div id="map" class="tintin"></div>
     </div>
     <!-- <div id="message"><p id="texte"></p></div> -->
