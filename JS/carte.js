@@ -87,6 +87,7 @@ function set(i){
       .then(result => {
         // ####REGLAGE AJOUT MARQUEUR SUR CARTE####
             var objet=result[0];
+            console.log(objet)
             var icon = L.icon({
                                     iconUrl: result[0].img,
                                     iconSize:     [50, 100], 
@@ -98,10 +99,10 @@ function set(i){
               markers.addLayer(marqueur);
             
             // ####APPEL DES FONCTIONS####
-              add_inventaire(marqueur);
-              remove_marqueur(marqueur);
-              voyage(marqueur);
-              niveau_zoom(markers);
+            voyage(marqueur,i);
+              add_inventaire(marqueur,i);
+              remove_marqueur(marqueur,i);
+              niveau_zoom(markers,i);
         })
 }
 for (var i = 1; i < 10; i++){
@@ -109,7 +110,7 @@ for (var i = 1; i < 10; i++){
         }
 
 // ####FONCTION AJOUT DES OBJETS DANS L'INVENTAIRE####
-function add_inventaire(marqueur){
+function add_inventaire(marqueur,i){
   var data='id='+i;
     fetch('../PHP/inventaire.php', {
       method: 'post',
@@ -120,23 +121,19 @@ function add_inventaire(marqueur){
       .then(result => result.json())
       .then(result => {
                 console.log(result[0].img);
-                function click(marqueur){
-                  if(result[0].type_objet==="recup"){
-                    var image = document.createElement("img");
+                  var image = document.createElement("img");
                     image.src=result[0].img;
                     image.setAttribute('id','myimg');
+                  if(result[0].type_objet==="recup"){
                     marqueur.on("click",function onClick(){
                       inventaire.appendChild(image);
                     },{once:true});
                   }
-                }
-                click(marqueur);
-                
       })
 }
 
 // ####FONCTION QUI SUPPRIME UN MARQUEUR DE LA CARTE APRÈS USAGE####
-function remove_marqueur(marqueur){
+function remove_marqueur(marqueur,i){
   var data='id='+i;
     fetch('../PHP/marqueur.php', {
       method: 'post',
@@ -156,7 +153,7 @@ function remove_marqueur(marqueur){
 }
 
 // ####FONCTION QUI PERMET DE VOYAGER D'UNE DESTINATION À UNE AUTRE####
-function voyage(marqueur){
+function voyage(marqueur,i){
   var data='id='+i;
     fetch('../PHP/voyage.php', {
       method: 'post',
@@ -175,7 +172,7 @@ function voyage(marqueur){
 }
 
 // ####FONCTION QUI PERMET D'AFFICHER LES OBJETS EN FONCTION DU ZOOM####
-function niveau_zoom(markers){
+function niveau_zoom(markers,i){
   var data='id='+i;
     fetch('../PHP/zoom.php', {
       method: 'post',
@@ -192,7 +189,7 @@ function niveau_zoom(markers){
           else if(map.getZoom()<result[0].niveau_zoom){
               map.removeLayer(markers);
             }
-      });
+      })
       })
 }
 

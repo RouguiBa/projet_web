@@ -3,7 +3,7 @@
     include("connect.php");
 
     $data=$_POST['id'];
-	$query='SELECT img,type_objet FROM objets';
+	$query='SELECT img,type_objet FROM objets where id='.$_POST['id'];
 	$result=mysqli_query($link,$query);
 	$arr=[];
     if(isset($result)){

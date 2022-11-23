@@ -3,7 +3,7 @@
     include("connect.php");
 
     $data=$_POST['id'];
-	$query='SELECT coord_x_suivant,coord_y_suivant,type_objet from objets';
+	$query='SELECT coord_x_suivant,coord_y_suivant,type_objet from objets where id='.$_POST['id'];
 	$result=mysqli_query($link,$query);
 	$arr=[];
     if(isset($result)){
