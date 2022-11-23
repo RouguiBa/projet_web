@@ -102,11 +102,14 @@ function set(i){
               remove_marqueur(marqueur);
               voyage(marqueur);
               niveau_zoom(markers);
-        })}
+        })
+}
+for (var i = 1; i < 10; i++){
+          set(i);
+        }
 
 // ####FONCTION AJOUT DES OBJETS DANS L'INVENTAIRE####
-
-function add_inventaire(m){
+function add_inventaire(marqueur){
   var data='id='+i;
     fetch('../PHP/inventaire.php', {
       method: 'post',
@@ -116,11 +119,12 @@ function add_inventaire(m){
      })
       .then(result => result.json())
       .then(result => {
-                var img = document.createElement("img");
-                img.src=result[0].img;
-                img.setAttribute('id','myimg');
+                console.log(result[0].img);
                 if(result[0].type_objet==="recup"){
-                  m.on("click",function onClick(){
+                  var img = document.createElement("img");
+                  img.src=result[0].img;
+                  img.setAttribute('id','myimg');
+                  marqueur.on("click",function onClick(){
                     inventaire.appendChild(img);
                   },{once:true});
                 }
@@ -188,10 +192,6 @@ function niveau_zoom(markers){
       })
 }
 
-
-for (var i = 1; i < 10; i++){
-  set(i);
-}
 
 // function recup(){
 //   if(list_objets[0].type_objet=='b_code'){
