@@ -3,7 +3,7 @@
     include("connect.php");
     // mysqli_set_charset($link,"utf8");
     $data=$_POST['id'];
-	$query='SELECT img,x,y,replique FROM objets where id='.$_POST['id'];
+	$query='SELECT niveau_zoom FROM objets ';
 	$result=mysqli_query($link,$query);
 	$arr=[];
     if(isset($result)){
