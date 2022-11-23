@@ -120,14 +120,18 @@ function add_inventaire(marqueur){
       .then(result => result.json())
       .then(result => {
                 console.log(result[0].img);
-                if(result[0].type_objet==="recup"){
-                  var img = document.createElement("img");
-                  img.src=result[0].img;
-                  img.setAttribute('id','myimg');
-                  marqueur.on("click",function onClick(){
-                    inventaire.appendChild(img);
-                  },{once:true});
+                function click(marqueur){
+                  if(result[0].type_objet==="recup"){
+                    var image = document.createElement("img");
+                    image.src=result[0].img;
+                    image.setAttribute('id','myimg');
+                    marqueur.on("click",function onClick(){
+                      inventaire.appendChild(image);
+                    },{once:true});
+                  }
                 }
+                click(marqueur);
+                
       })
 }
 
