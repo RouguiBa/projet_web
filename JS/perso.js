@@ -26,17 +26,17 @@ function message4(){
 }
 
 setTimeout(function choix1(){
-    window.location.href='../PHP/carte.php';
+    window.location.href='../html/carte.html';
     // var clicked=e.target.id;
     // document.getElementById("titre").innerText=clicked;
 }, 3000)
 setTimeout(function choix2(){
-    window.location.href='../PHP/carte.php';
+    window.location.href='../html/carte.html';
     
 },3000)
 setTimeout(function choix3(){
-    window.location.href='../PHP/carte.php';
+    window.location.href='../html/carte.html';
 },3000)
 setTimeout(function choix4(){
-    window.location.href='../PHP/carte.php';
+    window.location.href='../html/carte.html';
 },3000)

@@ -105,6 +105,7 @@ function set(i){
         })}
 
 // ####FONCTION AJOUT DES OBJETS DANS L'INVENTAIRE####
+
 function add_inventaire(m){
   var data='id='+i;
     fetch('../PHP/inventaire.php', {
@@ -115,7 +116,6 @@ function add_inventaire(m){
      })
       .then(result => result.json())
       .then(result => {
-                console.log(result);
                 var img = document.createElement("img");
                 img.src=result[0].img;
                 img.setAttribute('id','myimg');
