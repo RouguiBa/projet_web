@@ -194,9 +194,9 @@ function niveau_zoom(markers,i){
 }
 
 
-// function recup(){
-//   if(list_objets[0].type_objet=='b_code'){
+function recup(){
+  if(result[0].type_objet=='b_code'){
 
-//   }
-// }
+  }
+}
 
