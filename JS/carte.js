@@ -112,7 +112,7 @@ for (var i = 1; i < 10; i++){
 // ####FONCTION AJOUT DES OBJETS DANS L'INVENTAIRE####
 function add_inventaire(marqueur,i){
   var data='id='+i;
-    fetch('../PHP/inventaire.php', {
+    fetch('../PHP/database.php', {
       method: 'post',
       body: data,
       headers: {
@@ -135,7 +135,7 @@ function add_inventaire(marqueur,i){
 // ####FONCTION QUI SUPPRIME UN MARQUEUR DE LA CARTE APRÈS USAGE####
 function remove_marqueur(marqueur,i){
   var data='id='+i;
-    fetch('../PHP/marqueur.php', {
+    fetch('../PHP/database.php', {
       method: 'post',
       body: data,
       headers: {
@@ -155,7 +155,7 @@ function remove_marqueur(marqueur,i){
 // ####FONCTION QUI PERMET DE VOYAGER D'UNE DESTINATION À UNE AUTRE####
 function voyage(marqueur,i){
   var data='id='+i;
-    fetch('../PHP/voyage.php', {
+    fetch('../PHP/database.php', {
       method: 'post',
       body: data,
       headers: {
@@ -174,7 +174,7 @@ function voyage(marqueur,i){
 // ####FONCTION QUI PERMET D'AFFICHER LES OBJETS EN FONCTION DU ZOOM####
 function niveau_zoom(markers,i){
   var data='id='+i;
-    fetch('../PHP/zoom.php', {
+    fetch('../PHP/database.php', {
       method: 'post',
       body: data,
       headers: {
@@ -194,9 +194,21 @@ function niveau_zoom(markers,i){
 }
 
 
-function recup(){
-  if(result[0].type_objet=='b_code'){
+function recup(i){
+  var data='id='+i;
+    fetch('../PHP/database.php', {
+      method: 'post',
+      body: data,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'}
+     })
+      .then(result => result.json())
+      .then(result => {
+        if(result[0].type_objet=='b_code'){
+          var idx_obj_a_recup=result[0].id_debloque;
 
-  }
+          
+        }
+})
 }
 

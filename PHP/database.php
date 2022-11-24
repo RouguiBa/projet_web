@@ -3,7 +3,7 @@
     include("connect.php");
 
     $data=$_POST['id'];
-	$query='SELECT img,x,y,replique FROM objets where id='.$_POST['id'];
+	$query='SELECT * FROM objets where id='.$_POST['id'];
 	$result=mysqli_query($link,$query);
 	$arr=[];
     if(isset($result)){
@@ -14,6 +14,5 @@
     }elseif(!isset($result)){
         echo 'jhbdjfn';
     }
-
-   
+$link->close();
     ?>
