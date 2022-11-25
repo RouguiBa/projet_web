@@ -47,14 +47,14 @@ function add() {
         + ":" + (min > 9 ? min : "0" + min)
         + ":" + (sec > 9 ? sec : "0" + sec);
      var lastChar = chrono.innerText.slice(1,2);
-    if(lastChar == 1){
-               chrono.style.color = 'red';
-               //alert("temps dépassé  !")
-               window.open(
-           "../php/perdu.php"
-       );
-       chrono.stop();
-     }
+    // if(lastChar == 1){
+    //            chrono.style.color = 'red';
+    //            //alert("temps dépassé  !")
+    //            window.open(
+    //        "../php/perdu.php"
+    //    );
+    //    chrono.stop();
+    //  }
     timer();
 }
 
@@ -87,7 +87,6 @@ function set(i){
       .then(result => {
         // ####REGLAGE AJOUT MARQUEUR SUR CARTE####
             var objet=result[0];
-            console.log(objet)
             var icon = L.icon({
                                     iconUrl: result[0].img,
                                     iconSize:     [50, 100], 
@@ -99,8 +98,8 @@ function set(i){
               markers.addLayer(marqueur);
             
             // ####APPEL DES FONCTIONS####
-            voyage(marqueur,i);
-              add_inventaire(marqueur,i);
+              voyage(marqueur,i);
+              config_inventaire(marqueur,i);
               remove_marqueur(marqueur,i);
               niveau_zoom(markers,i);
         })
@@ -110,7 +109,7 @@ for (var i = 1; i < 10; i++){
         }
 
 // ####FONCTION AJOUT DES OBJETS DANS L'INVENTAIRE####
-function add_inventaire(marqueur,i){
+function config_inventaire(marqueur,i){
   var data='id='+i;
     fetch('../PHP/database.php', {
       method: 'post',
@@ -120,16 +119,37 @@ function add_inventaire(marqueur,i){
      })
       .then(result => result.json())
       .then(result => {
-                console.log(result[0].img);
                   var image = document.createElement("img");
                     image.src=result[0].img;
-                    image.setAttribute('id','myimg');
+                    image.setAttribute('id',result[0].id); //mettre id image de la base 
+                    image.setAttribute('class',"myimg"); 
                   if(result[0].type_objet==="recup"){
                     marqueur.on("click",function onClick(){
                       inventaire.appendChild(image);
                     },{once:true});
                   }
-      })
+                  var select=true;
+                  image.addEventListener("click",function selectionne(e){
+                    if(select==true){
+                      console.log(e.target.id);
+                      console.log(result[0]);
+                      image.style.border="thick solid red";
+                      select=false;
+                      if(result[0].type_objet==="b_objet" || result[0].type_objet==="b_code"){
+                      marqueur.on("click",function debloque(event){
+                        console.log(event);
+                        // if(){.originalEvent.srcElement.attributes.src.nodeValue
+
+                        // }
+                      })
+                      
+                    }
+                  }else if(select==false){
+                      image.style.border="none";
+                      select=true;
+                    }
+                  })
+       })
 }
 
 // ####FONCTION QUI SUPPRIME UN MARQUEUR DE LA CARTE APRÈS USAGE####
@@ -193,22 +213,21 @@ function niveau_zoom(markers,i){
       })
 }
 
-
-function recup(i){
-  var data='id='+i;
-    fetch('../PHP/database.php', {
-      method: 'post',
-      body: data,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'}
-     })
-      .then(result => result.json())
-      .then(result => {
-        if(result[0].type_objet=='b_code'){
-          var idx_obj_a_recup=result[0].id_debloque;
-
-          
-        }
-})
-}
+// function recup(image){
+//   var data='id='+i;
+//     fetch('../PHP/database.php', {
+//       method: 'post',
+//       body: data,
+//       headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded'}
+//      })
+//       .then(result => result.json())
+//       .then(result => {
+        
+//           // if(result[0].type_objet==='b_code' || result[0].type_objet==='b_objet'){
+//           //   var idx_obj_a_recup=result[0].id_debloque;
+//           //   marqueur.bindPopup("Ce objet est bloqué, pour le débloquer chercher l'item approprié",{maxWidth: 500});
+//           // }
+// })
+// }
 
