@@ -25,5 +25,5 @@ Vous pouvez cliquer sur un objet pour que les informations s'affichent et clique
 ## Solution du jeu 
 Vous trouverez la solution du jeu dans le fichier Solution.pdf 
 
-Ba Rouguiatou et BURGIN Ana - ING2 
+BA Rouguiatou et BURGIN Ana - ING2 
   
