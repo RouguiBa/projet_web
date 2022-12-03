@@ -4,12 +4,12 @@
 
 Bienvenue dans notre escape-gamme géographique, le but étant de retrouver Milou, le fidèle compagnon de Tintin. 
 
-## Quide d'installation: 
+## Quide d'installation : 
 
-Pour pouvoir jouer à notre escape-gamme il vous faudra : 
+Pour pouvoir jouer à notre escape-gamme, il vous faudra : 
   -Télécharger le projet 
-  -Le dézipper et le déplacer dans le dosier htdocs de Mamp
-  -Créer une base de donnée se nomant : "tintin_objets" dans phpMyadmin, et importer les trois tables : objets, objets_debloque, hall_of_fame
+  -Dans MAMP, allez dans les Préférences puis dans l'onglet Server pour connaître le chemin vers lequel copier le dossier. Généralement il s'agit du dossier htdocs de Mamp.
+  -Créer une base de données se nommant : "tintin_objets" dans phpMyAdmin, et importer les trois tables : objets, objets_debloque, hall_of_fame
   -Le fichier de départ est index.html
   
 ## Solution du jeu 
