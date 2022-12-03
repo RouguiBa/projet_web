@@ -19,5 +19,4 @@ if ($link->connect_error) {
       echo "....";
     }
   }
-    
-?>
+    ?>

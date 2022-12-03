@@ -38,7 +38,6 @@
     else {
     echo 'Succès... ';
      }
-
     $insert = "INSERT INTO hall_of_fame (pseudo,temps) values ('$pseudo','00:00:00') " ;
     $result=mysqli_query($link,$insert);
 

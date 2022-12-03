@@ -31,8 +31,6 @@
  
 </div>
 
-       
-
       </div>
     <script src="../JS/perso.js"></script>
   </body>

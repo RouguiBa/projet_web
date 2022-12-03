@@ -28,5 +28,4 @@ function podium_index(i){
 })
 }
 podium_index();
-
 }

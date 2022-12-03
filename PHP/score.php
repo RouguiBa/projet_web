@@ -37,7 +37,6 @@
           }
           $link->close();           
           ?>
-            
         </table>
 
         </div>

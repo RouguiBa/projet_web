@@ -439,5 +439,4 @@ for (var i = 1; i < 15; i++){
 }
 for (var j = 1; j < 3; j++){
 debloque_obj_b_obj(j);
-
 }
