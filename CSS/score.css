@@ -1,0 +1,54 @@
+@font-face {
+    font-family:'tintin';
+    src: url('police/tintin_talking-webfont.woff2') format('woff2');
+  }
+  #form{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family:"tintin";
+    }
+  
+  #en_tete{
+    display:flex;
+    text-align: center;
+    color:rgb(255,255,255);
+    font-size: 160%;
+    justify-content:center;
+  }
+  
+  #contenu {
+  display:flex;
+  align-items:center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../IMG/tintin_cherchemilou.jpg");
+  background-size: cover;
+  flex-direction: column;
+  color: white;
+  }
+
+  #table {
+    table-layout: fixed;
+    width: 50%;
+    border-collapse: collapse;
+    border: 3px solid rgb(255, 255, 255);
+  }
+  
+  
+  #rejouer {
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;}
+.bouton {
+        background-color: white;
+        font-family: 'tintin';
+        font-size: 80%;
+        width: 40%;
+        border-radius: 16px;
+}

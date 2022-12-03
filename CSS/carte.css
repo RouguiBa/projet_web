@@ -51,18 +51,18 @@
     grid-column: 3;
     grid-row: 1;
   }
-  /* #footer{
+  #footer{
       padding: 10px;
       text-align: justify;
       grid-row: 3;
       grid-column: 1 / span 3;
     overflow: auto;
     float: left;
-  } */
+  }
   
   /* #footer em {
     font-family: Waltograph;
-  } */
+  }
   /*--(INVENTAIRE)--*/
   
   #inventaire {
