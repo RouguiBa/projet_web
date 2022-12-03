@@ -9,10 +9,10 @@
   <body>    
       <div id="contenu">
         <div id="en_tete">
-          <h1> Bravo<?php echo $_POST['pseudo']; ?> tu as réussi à retrouver Milou et tu as ainsi terminé le jeu ! </h1>
+          <h1> Bravo! tu as réussi à retrouver Milou et tu as ainsi terminé le jeu ! </h1>
         </div>
 
-        <h2> <br> Voici la liste des joueurs avec leur temp et score !  </h2>
+        <h2> <br> Voici la liste des joueurs avec leur temps et score !  </h2>
         <h2> <br> Hall of fame : <h2>
         <div id="resultats">
          
@@ -20,17 +20,19 @@
           <tr>
               <td>PSEUDO</td>
               <td>TEMPS</td>
+              <td>SCORE</td>
           </tr>
                 
           <?php
            // Affichage du "Hall of fame" 
         include("connect.php");
-        $query = "SELECT * FROM hall_of_fame ORDER BY temps DESC limit 10";
+        $query = "SELECT * FROM hall_of_fame ORDER BY points DESC limit 10";
         $resultat =mysqli_query($link,$query);
           while($ligne = mysqli_fetch_assoc($resultat)){
           echo '<tr>';
           echo '<td>'.$ligne['pseudo'].'</td>';
           echo '<td>'.$ligne['temps'].'</td>';
+          echo '<td>'.$ligne['points'].'</td>';
           echo '</tr>';   
           }
           $link->close();           
@@ -43,9 +45,7 @@
   <button class="bouton"><a href="../index.html">Rejouer!</a></button>
   </div>
       </div>
-    <script src="../JS/score.js"></script>
-    <script src="../JS/carte.js"></script>
-    <script src="../JS/perso.js"></script>
+    <script src="../JS/podium.js"></script>
   </body>
 </html>
 

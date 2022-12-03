@@ -1,7 +1,7 @@
 <?php
 include("connect.php");
 $podium=$_POST['id'];
-$query='SELECT * FROM hall_of_fame ORDER BY temps DESC limit 5';
+$query='SELECT * FROM hall_of_fame ORDER BY points DESC limit 5';
 $retour=mysqli_query($link,$query);
 $arr=[];
 if(isset($retour)){

@@ -11,7 +11,7 @@ function podium_index(i){
  *depuis la base de donnée 
  */
   var podium="id="+i
-  fetch("PHP/podium.php",{
+  fetch("http://localhost/projet_web/PHP/podium.php",{
     method : "POST",
     body : podium,
     headers: {
@@ -20,11 +20,12 @@ function podium_index(i){
 })
 .then(result => result.json())
 .then(result => {
-  premier.innerHTML='<td>'+JSON.parse(JSON.stringify(result[0].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[0].temps))+'</td>';
-  deuxieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[1].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[1].temps))+'</td>';
-  troisieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[2].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[2].temps))+'</td>';
-  quatrieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[3].pseudo))+'</td> '+'<td>'+JSON.parse(JSON.stringify(result[3].temps))+'</td>';
-  cinquieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[4].pseudo))+'</td> '+'<td>'+JSON.parse(JSON.stringify(result[4].temps))+'</td>';
+  console.log(result);
+  premier.innerHTML='<td>'+JSON.parse(JSON.stringify(result[0].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[0].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[0].points))+'</td>';
+  deuxieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[1].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[1].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[1].points))+'</td>';
+  troisieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[2].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[2].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[2].points))+'</td>';
+  quatrieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[3].pseudo))+'</td> '+'<td>'+JSON.parse(JSON.stringify(result[3].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[3].points))+'</td>';
+  cinquieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[4].pseudo))+'</td> '+'<td>'+JSON.parse(JSON.stringify(result[4].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[4].points))+'</td>';
 })
 }
 

@@ -403,10 +403,15 @@ function score(e){
  * afin de l'insérer dans la base de donnée
  */
   var pseudo = document.getElementById("pseudo").innerHTML;
-  console.log("pseudo",pseudo);
-  console.log("temps",temps)
   var temps = document.getElementById("chrono").innerHTML;
-  let score = {'pseudo': pseudo, 'temps':temps};
+  var heure = temps.slice(0,2);
+  var minutes = parseInt(temps.slice(3,5));
+  var secondes = parseInt(temps.slice(6,8));
+  var time = secondes + minutes*60 +heure*3600; 
+  var points = 3600 - time // 1h max 
+  let score = {'pseudo': pseudo, 'temps':temps,'points':points};
+  console.log(heure,minutes,secondes);
+  console.log("json",score)
   fetch("../PHP/fin.php",{
     method : "POST",
     body : JSON.stringify(score),
