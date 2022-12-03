@@ -60,15 +60,9 @@
     float: left;
   }
   
-  /* #footer em {
-    font-family: Waltograph;
-  }
-  /*--(INVENTAIRE)--*/
-  
+
   #inventaire {
     color: white;
-    /* border: solid 2px black; */
-    /* border-radius: 10px; */
     grid-column: 3;
     grid-row:2/ span 3;
     align-content: space-between;
@@ -84,14 +78,4 @@
 .myimg{
     height: 100px;
     width: 50px;
-    /* grid-auto-flow:column;
-    grid-auto-flow:row; */
 }
-  
-  /* #TitreInventaire {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    font-size: 2vh;
-  }
-   */
-  
