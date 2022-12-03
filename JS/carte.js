@@ -400,7 +400,11 @@ function button_fin(marqueur){
 function score(e){
   /**
  *Cette fonction permet de récupérer  le chrono du joueur et son pseudo 
- * afin de l'insérer dans la base de donnée
+ * afin de l'insérer dans la base de donnée.
+ * Elle permet également de calculer un score en se basant sur le chrono du Joueur.
+ * En effet en supposant que le temps max qu'un joueur peut passer sur le jeu est de 1h
+ * soit 3600s duquel on déduit le chrono du joueur pour obtenir un score
+ * temps max 1h score max temps max plus ton temps diminu
  */
   var pseudo = document.getElementById("pseudo").innerHTML;
   var temps = document.getElementById("chrono").innerHTML;
@@ -428,6 +432,7 @@ function score(e){
  })
 
 }
+
 // #########Appel de fonction#########
 for (var i = 1; i < 15; i++){
   set(i);
