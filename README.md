@@ -27,3 +27,4 @@ Vous trouverez la solution du jeu dans le fichier Solution.pdf
 
 Ba Rouguiatou et BURGIN Ana - ING2 
   
+![image](https://www.ensg.eu/-MEP0-/apv/logo.png)
