@@ -1,14 +1,14 @@
 # Projet Web 
 
-## Escape-gamme - Les aventures de Tintin 
+## Escape-game - Les aventures de Tintin 
 
-Bienvenue dans notre escape-gamme géographique, le but étant de retrouver Milou, le fidèle compagnon de Tintin. 
+Bienvenue dans notre escape-game géographique, dont le but est de retrouver Milou, le fidèle compagnon de Tintin. Ce escape game à été réalisé dans le cadre d'un projet scolaire en Programmation Web Avancée
 
 ## Quide d'installation : 
 
 Pour pouvoir jouer à notre escape-gamme, il vous faudra :
   - Télécharger le projet 
-  - Dans MAMP, allez dans les Préférences puis dans l'onglet Server pour connaître le chemin vers lequel copier le dossier. Généralement il s'agit du dossier htdocs de Mamp.
+  - Dans MAMP, allez dans les Préférences puis dans l'onglet "Server" pour connaître le chemin vers lequel copier le dossier. Généralement il s'agit du dossier htdocs de Mamp.
   - Créer une base de données se nommant : "tintin_objets" dans phpMyAdmin, et importer les trois tables : objets, objets_debloque, hall_of_fame
   - Le fichier de départ est index.html
   
@@ -20,7 +20,7 @@ Il existe 4 types d'objets :
 - Les objets récupérables servent à dévérrouiller les objets bloqués, ils peuvent être récupérés et conservés dans l'inventaire. 
 - Les objets code, ils affichent une aide pour trouver le code d'un objet bloqué par un code.
 
-Vous pouvez cliquer sur un objet pour que les informations s'affichent et cliquer de nouveau dessus pour que l'objet disparaisse de la carte. 
+Vous pouvez cliquer sur un objet pour que les informations s'affichent et cliquer de nouveau dessus pour que l'objet disparaisse de la carte s'il est de type récupérable. 
   
 ## Solution du jeu 
 Vous trouverez la solution du jeu dans le fichier Solution.pdf 
