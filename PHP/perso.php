@@ -12,51 +12,29 @@
       
     <div id="contenu">
       <div id="en_tete">
-        <h1> Choisi ton personnage pour aider Tintin à retrouver Milou </h1>
+        <h1> <br>Choisi ton pseudo pour aider Tintin à retrouver Milou </h1>
         </div>
+        <p><br></p>
+        <p><br></p>
 
-        <h2> Choisi d'abord ton pseudo : </h2>
+        <div id="gif">
+    <img class="generi" src="../IMG/generique.gif">
+  </div>
+  <p><br></p>
+
         <div class= "avatar">
-        <p>
           <form id="form" action="../PHP/carte.php" method="post">
-          <p>
-          <p id="input_pseudo">
         <input id="pseudo" type="text" name="pseudo" require minlength="1" placeholder="Choisi ton pseudo">
-        </p>
-        
-        <input type="image" id="1" class="btn" src="../IMG/loupe.jpeg">
-        </p>
-
+        <p><br></p>
+        <input id="bouton" type="submit" value="Commencer à jouer">
         </form> 
-        </p>
  
-        </div>
+</div>
 
-        <h2>Et maintenant ton pseudo : </h2>
-
-        <div id="Joueur"></div>
-
-        <?php
-        //Ajout valeur pseudo dans la BDD
-        include("connect.php");
-        if(isset($_POST['pseudo'])){
-          echo "Identifiant: ";
-          echo $_POST['pseudo'];
-          $link->set_charset("utf8");
-        $requete = "INSERT INTO hall_of_fame VALUES('','".$_POST['pseudo']."','00:24:12','150')";
-        $resultat = $link->query($requete);
-        if ($resultat)
-            echo "<p>Le contact a été ajouté</p>";
-        else
-            echo "<p>Erreur</p>";
-        $link->close();
-      }
-      else{echo "error";}
-        ?>
+       
 
       </div>
     <script src="../JS/perso.js"></script>
-    <script src="../JS/carte.js"></script>
   </body>
 </html>
 

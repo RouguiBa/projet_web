@@ -410,8 +410,6 @@ function score(e){
   var time = secondes + minutes*60 +heure*3600; 
   var points = 3600 - time // 1h max 
   let score = {'pseudo': pseudo, 'temps':temps,'points':points};
-  console.log(heure,minutes,secondes);
-  console.log("json",score)
   fetch("../PHP/fin.php",{
     method : "POST",
     body : JSON.stringify(score),

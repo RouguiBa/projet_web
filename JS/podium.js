@@ -1,5 +1,5 @@
-
-var premier = document.getElementById("premier");
+if(document.getElementById("premier") && document.getElementById("deuxieme") && document.getElementById("troisieme") && document.getElementById("quatrieme") && document.getElementById("cinquieme")){
+  var premier = document.getElementById("premier");
 var deuxieme = document.getElementById("deuxieme");
 var troisieme = document.getElementById("troisieme");
 var quatrieme = document.getElementById("quatrieme");
@@ -20,7 +20,6 @@ function podium_index(i){
 })
 .then(result => result.json())
 .then(result => {
-  console.log(result);
   premier.innerHTML='<td>'+JSON.parse(JSON.stringify(result[0].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[0].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[0].points))+'</td>';
   deuxieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[1].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[1].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[1].points))+'</td>';
   troisieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[2].pseudo))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[2].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[2].points))+'</td>';
@@ -28,5 +27,6 @@ function podium_index(i){
   cinquieme.innerHTML='<td>'+JSON.parse(JSON.stringify(result[4].pseudo))+'</td> '+'<td>'+JSON.parse(JSON.stringify(result[4].temps))+'</td>'+'<td>'+JSON.parse(JSON.stringify(result[4].points))+'</td>';
 })
 }
-
 podium_index();
+
+}

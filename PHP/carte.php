@@ -44,7 +44,6 @@
 
     echo json_encode($result);
     ?>
-    <script src="../JS/perso.js"></script>
     <script src="../JS/carte.js"></script>
 </body>
 </html>
