@@ -1,6 +1,6 @@
 # Projet Web 
 
-## Projet WEB - Escape-gamme - Les aventures de Tintin 
+## Escape-gamme - Les aventures de Tintin 
 
 Bienvenue dans notre escape-gamme géographique, le but étant de retrouver Milou, le fidèle compagnon de Tintin. 
 
