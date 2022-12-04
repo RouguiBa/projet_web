@@ -8,7 +8,7 @@ Bienvenue dans notre Escape-Game géographique, dont le but est de retrouver Mil
 
 Pour pouvoir jouer à notre Escape-Game, il vous faudra :
   - Télécharger le projet 
-  - Dans MAMP, allez dans les Préférences puis dans l'onglet "Server" pour connaître le chemin vers lequel copier le dossier. Généralement, il s'agit du dossier htdocs de Mamp.
+  - Dans MAMP, allez dans les Préférences puis dans l'onglet "Server" pour connaître le chemin vers lequel copier le dossier. Généralement, il s'agit du dossier htdocs de MAMP.
   - Créer une base de données se nommant : "tintin_objets" dans phpMyAdmin, et importer les trois tables : objets, objets_debloque, hall_of_fame
   - Le fichier de départ est index.html
   
