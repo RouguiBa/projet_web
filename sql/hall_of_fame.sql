@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : sam. 03 déc. 2022 à 18:31
+-- Généré le : dim. 04 déc. 2022 à 00:05
 -- Version du serveur : 5.7.34
 -- Version de PHP : 7.4.21
 
@@ -38,29 +38,15 @@ CREATE TABLE `hall_of_fame` (
 --
 
 INSERT INTO `hall_of_fame` (`pseudo`, `temps`, `points`) VALUES
-('Rougui', '00:00:00', 0),
-('Rougui', '00:00:00', 0),
-('', '00:00:00', 0),
-('', '00:00:00', 0),
-('Rougui', '00:00:00', 0),
-('Rougui', '00:00:00', 0),
-('Rougui', '00:00:00', 0),
-('sdfzd', '00:00:00', 0),
-('sdfzd', '00:00:00', 0),
-('sdfzd', '00:00:00', 0),
-('sdfzd', '00:00:00', 0),
-('sdfzd ', '00:00:33', 0),
-('bj', '00:00:00', 0),
-('bj ', '00:00:33', 0),
-('jplkjm', '00:00:00', 0),
-('jplkjm ', '00:03:55', 0),
-('sdfgh', '00:00:00', 0),
-('sdfgh ', '00:07:12', 0),
-('sdfgh', '00:00:00', 0),
-('efdesolkfp^ùse ', '00:00:27', 3573),
-('efdesolkfp^ùse ', '00:00:35', 3565),
-('Rougui ', '00:03:06', 3414),
-('Rougui ', '00:00:24', 3576);
+('Rougui', '00:05:10', 3290),
+('Ana', '00:07:03', 3177),
+('Castafiore', '00:10:27', 2973),
+('Capitaine Haddock', '00:04:35', 3325),
+('Professeur Tournesol', '00:03:06', 3414),
+('Duppont', '00:06:24', 3216),
+('Duppond', '00:06:24', 3216),
+('Rougui ', '00:00:32', 3568),
+('Rougui ', '00:00:34', 3566);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

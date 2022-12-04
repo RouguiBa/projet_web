@@ -9,7 +9,7 @@ if ($link->connect_error) {
     $pseudo = $data["pseudo"];
     $temps=$data["temps"];
     $points=$data["points"];
-    $insertion1 = "INSERT INTO hall_of_fame (id, pseudo,temps,points) values ('','$pseudo','$temps','$points') " ;
+    $insertion1 = "INSERT INTO hall_of_fame (pseudo,temps,points) values ('$pseudo','$temps','$points') " ;
     $result=mysqli_query($link,$insertion1);
 
     if ($result){
