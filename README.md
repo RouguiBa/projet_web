@@ -22,10 +22,9 @@ Il existe 4 types d'objets :
 - Les objets récupérables servent à déverrouiller les objets bloqués, ils peuvent être récupérés et conservés dans l'inventaire. 
 
 - Les objets code, ils affichent une aide pour trouver le code d'un objet bloqué par un code.
-
-Vous pouvez cliquer sur un objet pour que les informations s'affichent.
   
 Si un objet est de type récupérable, il s’ajoute dans l’inventaire lorsque vous cliquez dessus une première fois. Il faudra cliquer à nouveau dessus une seconde fois pour qu'il s'enlève de la carte.  
+Si objet est bloqué par un autre objet, lorsque vous le débloquez avec le bon objet, son popup se referme automatiquement. Il faudra cliquer à nouveau sur l'objet avant de cliquer sur le nouvel objet débloqué qui apparaitra car ce dernier contiendra un nouveau message dans son popup.
   
 ## Solution du jeu 
 Vous trouverez la solution du jeu dans le fichier Solution.pdf 
